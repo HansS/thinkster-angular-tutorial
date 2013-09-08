@@ -1,5 +1,5 @@
 var mongoose = require('mongoose')
-	, asynce = require('asynce')
+	, asynce = require('async')
 	, League = mongoose.model('League')
 	, _ = require('underscore')
 	
@@ -30,7 +30,7 @@ exports.all = function(req, res) {
 		if(err) {
 			res.render('error', {status: 500});
 		} else {
-			return.jsonp(leagues);
+			return res.jsonp(leagues);
 		}
 	});
 };

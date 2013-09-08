@@ -5,7 +5,7 @@ var mongoose = require('mongoose')
 	
 var LeagueSchema = new Schema({
 	name: {type: String},
-	commissioner: {type: Schema.ObjectId, ref; 'User'}
+	commissioner: {type: Schema.ObjectId, ref: 'User'}
 });
 
 LeagueSchema.statics = {
