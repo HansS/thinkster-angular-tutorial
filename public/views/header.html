@@ -1,6 +1,9 @@
 <div class="navbar-inner" ng-controller="HeaderController">
 	<ul class="nav">
 		<li><a class="brand" href="/">ngFantasyFootball</a></li>
+        <li ng-repeat="entry in navbarEntries" ng-show="global.isSignedIn()">
+            <a href="#!/{{entry.link}}">{{entry.title}}</a>
+        </li>
 	</ul>
 	<ul class="nav pull-right" ng-hide="global.isSignedIn()">
 		<li><a href="signup">Signup</a></li>
