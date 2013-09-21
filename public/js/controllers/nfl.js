@@ -5,4 +5,5 @@ window.angular.module('ngff.controllers.nfl', [])
 		
 		$scope.nflteams = NFL.teams;
 		$scope.nflteam = NFL.teams[$routeParams['nflTeamId']];
-	}]);
+	}]
+);

@@ -42,6 +42,10 @@ window.app.config(['$routeProvider', function($routeProvider) {
   { 
     templateUrl: 'views/fantasyteams/view.html' 
   })
+  .when('/players',
+  {
+    templateUrl: 'views/players/list.html'
+  })
 	
 	.otherwise({redirectTo: '/'});
 }]);
