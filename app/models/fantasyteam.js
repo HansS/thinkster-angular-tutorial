@@ -11,7 +11,7 @@ var FantasyTeamSchema =new Schema({
 });
 
 FantasyTeamSchema.statics = {
-  load: function(id, db) {
+  load: function(id, cb) {
     this.findOne({ _id : id})
       .populate('owner')
       .populate('league')

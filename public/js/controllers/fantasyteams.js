@@ -39,8 +39,8 @@ window.angular.module('ngff.controllers.fantasyteams', [])
         });
       };
       
-      $scope.findOne = function() {
-        FantasyTeams.get({fantasyTeamId: $routeParams.fantasyTeamId}, function(fantasyteams) {
+      $scope.findOne = function () {
+        FantasyTeams.get({ fantasyTeamId: $routeParams.fantasyTeamId }, function (fantasyteam) {
           $scope.fantasyteam = fantasyteam;
         });
       };
@@ -50,6 +50,7 @@ window.angular.module('ngff.controllers.fantasyteams', [])
         for(var i in $scope.fantasyteams) {
           if($scope.fantasyteams[i] == fantasyteam) {
             $scope.fantasyteams.splice[i, 1];
+            $location.path('fantasyteams/');
           }
         }
       };

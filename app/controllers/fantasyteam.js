@@ -16,7 +16,7 @@ exports.show = function(req, res) {
 };
 
 exports.fantasyteam = function(req, res, next, id) {
-  var FantasyTeam = mongose.model('FantasyTeam');
+  var FantasyTeam = mongoose.model('FantasyTeam');
   FantasyTeam.load(id, function(err, fantasyteam) {
     if(err) return next(err);
     if(!fantasyteam) return next(new Error('Failed to load fantasy team ' + id));

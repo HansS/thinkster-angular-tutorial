@@ -2,9 +2,9 @@ window.angular.module('ngff.services.fantasyteams', [])
   .factory('FantasyTeams', ['$resource', 
     function($resource) {
       return $resource(
-        'fantasyteams/:fantasyTeamid', 
+        '/fantasyteams/:fantasyTeamId', 
         {
-          fantasyTeamid: '@_id'
+          fantasyTeamId: '@_id'
         },
         {
           update: { method: 'PUT' }
