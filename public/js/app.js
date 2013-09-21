@@ -5,11 +5,13 @@ window.angular.module('ngff.controllers',
 	['ngff.controllers.header',
 	'ngff.controllers.index', 
 	'ngff.controllers.nfl',
-	'ngff.controllers.leagues'
+	'ngff.controllers.leagues',
+  'ngff.controllers.fantasyteams'
 	]);
 	
 window.angular.module('ngff.services', 
 	['ngff.services.global', 
 	'ngff.services.nfl',
-	'ngff.services.leagues'
+	'ngff.services.leagues',
+  'ngff.services.fantasyteams'
 	]);

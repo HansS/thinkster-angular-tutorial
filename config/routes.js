@@ -27,7 +27,7 @@ module.exports = function (app, passport, auth) {
   app.param('leagueId', leagues.league)
   
   // Fantasy team routes.
-    var fantasyteams = require('../app/controllers/fantasyteams')  
+    var fantasyteams = require('../app/controllers/fantasyteam')  
     app.get('/fantasyteams', fantasyteams.all)
     app.post('/fantasyteams', auth.requiresLogin, fantasyteams.create)
     app.get('/fantasyteams/:fantasyTeamId', fantasyteams.show)
